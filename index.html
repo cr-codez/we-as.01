@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Web Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <script src="script.js"></script>
+    <div class="container">
+      <h2>Responsive Web Form</h2>
+
+      <form id="web-form">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+
+        <div class="form-group">
+          <label for="number">Number:</label>
+          <input type="number" id="number" name="number" required />
+        </div>
+
+        <div class="form-group">
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" required />
+        </div>
+
+        <div class="form-group">
+          <label for="color">Color:</label>
+          <input type="color" id="color" name="color" required />
+        </div>
+
+        <div class="form-group" id="">
+          Range:<br />
+          <label class="slider">
+            <input
+              type="range"
+              id="range"
+              name="range"
+              class="level"
+              required
+            />
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label for="file" class="file-upload-label"
+            ><div class="file-upload-design">
+              <p>Drag and Drop</p>
+              <p>or</p>
+              <span class="browse-button">Browse file</span>
+            </div>
+            <input id="file" type="file" />
+          </label>
+        </div>
+
+        <!-- PHONE NUMBER -->
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input type="text" id="phone" name="phone" required />
+        </div>
+
+        <!-- POSTAL CODE -->
+        <div class="form-group">
+          <label for="postal-code">Postal Code:</label>
+          <input type="text" id="postal-code" name="postal-code" required />
+        </div>
+
+        <!-- RADIO BUTTON -->
+        <div class="form-group" id="radioButton">
+          <label for="radio">Radio Buttons:</label>
+          <div>
+            <label>
+              <input type="radio" name="radio">
+              <span>Man</span>
+            </label>
+            <label>
+              <input type="radio" name="radio">
+              <span>Woman</span>
+            </label>
+            <label>
+              <input type="radio" name="radio">
+              <span>Still Deciding</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- CHECKBOXES -->
+        <div class="form-group" id="checklist">
+          <label>Checkboxes:</label>
+          <div class="CHK">
+            <input value="1" name="r" type="checkbox" id="01" />
+            <label for="01" class="checkmark"></label>
+            Bread
+          </div>
+          <div class="CHK">
+            <input value="2" name="r" type="checkbox" id="02" />
+            <label for="02" class="checkmark"></label>
+            Cheese
+          </div>
+          <div class="CHK">
+            <input value="3" name="r" type="checkbox" id="03" />
+            <label for="03" class="checkmark"></label>
+            Coffee
+          </div>
+        </div>
+
+        <button type="submit">Submit</button>
+        <div id="validation-summary"></div>
+      </form>
+    </div>
+  </body>
+</html>

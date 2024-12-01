@@ -1,0 +1,351 @@
+body {
+  font-family: "Poppins";
+  background-color: #f4f4f4;
+}
+
+/* BACKGROUND PATTERN */
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  --color: #e1e1e1;
+  background-color: #f3f3f3;
+  background-image: linear-gradient(
+      0deg,
+      transparent 24%,
+      var(--color) 25%,
+      var(--color) 26%,
+      transparent 27%,
+      transparent 74%,
+      var(--color) 75%,
+      var(--color) 76%,
+      transparent 77%,
+      transparent
+    ),
+    linear-gradient(
+      90deg,
+      transparent 24%,
+      var(--color) 25%,
+      var(--color) 26%,
+      transparent 27%,
+      transparent 74%,
+      var(--color) 75%,
+      var(--color) 76%,
+      transparent 77%,
+      transparent
+    );
+  background-size: 55px 55px;
+}
+
+/* GENERAL STYLING */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bolder;
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="number"],
+input[type="file"] {
+  width: 300px;
+  padding: 0.875rem;
+  font-size: 1rem;
+  border: 1.5px solid #000;
+  border-radius: 0.5rem;
+  box-shadow: 2.5px 3px 0 #000;
+  outline: none;
+  transition: ease 0.25s;
+}
+
+/* DATE STYLING */
+input[type="date"] {
+  cursor: pointer;
+}
+
+/* COLOUR PICKER STYLING */
+input[type="color"] {
+  width: 40px;
+  height: 40px;
+}
+
+/* SLIDER SYLING */
+input[type="range"] {
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.slider {
+  /* background */
+  --slider-width: 100%;
+  --slider-height: 6px;
+  --slider-bg: #000;
+  --slider-border-radius: 999px;
+
+  /* foreground */
+  --level-color: red;
+  --level-transition-duration: 0.1s;
+}
+
+.slider {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.slider .volume {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: var(--icon-margin);
+  color: var(--icon-color);
+  width: var(--icon-size);
+  height: auto;
+}
+
+.slider .level {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: var(--slider-width);
+  height: var(--slider-height);
+  background: var(--slider-bg);
+  overflow: hidden;
+  border-radius: var(--slider-border-radius);
+  -webkit-transition: height var(--level-transition-duration);
+  -o-transition: height var(--level-transition-duration);
+  transition: height var(--level-transition-duration);
+  cursor: inherit;
+}
+
+.slider .level::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 0;
+  height: 0;
+  -webkit-box-shadow: -200px 0 0 200px var(--level-color);
+  box-shadow: -200px 0 0 200px var(--level-color);
+}
+
+.slider:hover .level {
+  height: calc(var(--slider-height) * 2);
+}
+
+/* FILE UPLOAD STYLING */
+
+.file-upload-label input {
+  display: none;
+}
+
+.file-upload-label {
+  cursor: pointer;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  border: 2px dashed rgb(82, 82, 82);
+}
+
+.file-upload-design {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.browse-button {
+  background-color: #000;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+.browse-button:hover {
+  background-color: #fff;
+  color: #000;
+  border: #000 2px solid;
+  box-shadow: 5.5px 7px 0 black;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 10px;
+}
+
+#radioButton {
+  display: inline;
+}
+
+/* SUBMIT BUTTON STYLING */
+
+button[type="submit"] {
+  width: 100%;
+  height: 40px;
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #fff;
+  color: #000;
+  border: #000 2px solid;
+  box-shadow: 5.5px 7px 0 black;
+}
+
+/* RADIO BUTTON STYLING */
+#radioButton:focus {
+  background-color: #fff;
+  color: #000;
+  border: #000 2px solid;
+  box-shadow: 5.5px 7px 0 black;
+}
+
+#radioButton div {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  justify-content: left;
+}
+
+#radioButton input[type="radio"] {
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#radioButton input[type="radio"]:checked + span {
+  box-shadow: 0 0 0 0.0625em #fff;
+  background-color: #000;
+  z-index: 1;
+  color: #fff;
+}
+
+#radioButton label span {
+  display: block;
+  cursor: pointer;
+  background-color: #fff;
+  padding: 0.375em .75em;
+  position: relative;
+  margin-left: .0625em;
+  box-shadow: 0 0 0 0.0625em #b5bfd9;
+  letter-spacing: .05em;
+  color: #000;
+  text-align: center;
+  transition: background-color .5s ease;
+}
+
+label:first-child span {
+  border-radius: .375em 0 0 .375em;
+}
+
+label:last-child span {
+  border-radius: 0 .375em .375em 0;
+}
+
+/* CHECKBOX STYLING */
+
+.CHK {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.CHK label {
+  margin-bottom: 2px;
+}
+
+.CHK input {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkmark {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.CHK input:checked ~ .checkmark {
+  background-color: #000;
+  border-color: #000;
+}
+
+.checkmark:after {
+  content: "";
+  width: 5px;
+  height: 10px;
+  position: absolute;
+  top: 4px;
+  left: 8px;
+  display: none;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.CHK input:checked ~ .checkmark:after {
+  display: block;
+}
+
+#validation-summary {
+  color: red;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* RESPONSIVE DESIGN SECTION */
+
+@media only screen and (max-width: 768px) {
+  .container {
+    margin: 20px auto;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    margin: 10px auto;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="date"],
+  input[type="color"],
+  input[type="file"] {
+    height: 10px;
+  }
+
+  input[type="color"] {
+    width: 10px;
+  }
+}
